@@ -1,0 +1,284 @@
+body {
+  background-color: #000000;
+  font-family: 'Acari Sans', sans-serif;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 40vw;
+      flex-basis: 40vw;
+}
+
+.cards .item {
+  margin: 1vh;
+  height: 13vh;
+  width: 17vw;
+  outline: 0.05px solid gray;
+  background-color: #222222;
+}
+
+.cards .item .bandera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards .item .bandera img {
+  padding: 1vh 0;
+}
+
+.cards .item .titulo {
+  color: #f3f3f3;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.3vh;
+}
+
+.cards .item .amount {
+  margin: 0vh;
+  padding: -0.5vh -0.5vw;
+  text-align: center;
+  font-size: calc(1em + 1vw);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .casospaises {
+  margin: 1vh;
+  background: #222222;
+  outline: 0.05px solid gray;
+  width: 17vw;
+  min-height: 80vh;
+}
+
+.container .casospaises h2 {
+  font-size: 1rem;
+  margin: 0 1vw;
+  padding-top: 3vh !important;
+  color: silver;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.container .casospaises ul {
+  margin: 1vh 1vw;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 60vh;
+}
+
+.container .casospaises ul li {
+  color: orange;
+  list-style-type: none;
+  padding: 0.5vh 0;
+}
+
+.container .casospaises ul li button {
+  width: 100%;
+  padding: 1vh 1vh;
+  background-color: #444444;
+  color: #dddddd;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  margin: 0.5vh 0;
+  cursor: pointer;
+}
+
+.container .casospaises ul li button:hover {
+  background-color: #575757;
+}
+
+.container .casospaises ul::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #404040;
+}
+
+.container .casospaises ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container .casospaises ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #737272;
+  border: 1px solid #000;
+}
+
+.container .map {
+  margin: 0vh 0.5vw !important;
+  width: 70.8vw !important;
+  height: 80vh !important;
+  
+}
+
+
+.svgmap {
+  fill: #a1d99b;
+  cursor: pointer; 
+}
+.svgmap:focus, .svgmap:hover {
+    fill: #ff2424;
+    outline: 0; 
+}
+
+.red {
+  color: #ff2424;
+}
+
+.green {
+  color: #0fcc0f;
+}
+
+.orange {
+  color: orange;
+}
+
+@media only screen and (max-width: 768px) {
+  .cards
+  {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards .item {
+    width: 90vw;
+    padding: 2.5vh 1vw;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .container .casospaises {
+    width: 89.5vw;
+    padding: 2.5vh 1vw;
+  }
+  .container .casospaises li button {
+    width: 100%;
+  }
+  .container .map {
+    width: 89.5vw !important;
+    padding: 2.5vh 1.1vw !important;
+  }
+}
+
+
+/*
+ Loading made by: https://lukehaas.me/
+*/
+.loadcenter
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: absolute;
+  color: #ffffff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 45vh;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
