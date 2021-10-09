@@ -1,4 +1,4 @@
-Live demo: [https://grossomaximiliano.github.io/CoronaVirus__build/](https://grossomaximiliano.github.io/CoronaVirus__build/)
+Live demo ( Si muestra que la cantidad de recuperados es 0 es un problema de la api, no de la web. ): [https://grossomaximiliano.github.io/CoronaVirus__build/](https://grossomaximiliano.github.io/CoronaVirus__build/)
 
 
 # Getting Started with Create React App
